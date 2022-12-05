@@ -13,15 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('timeWorked', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->enum('role', ['user', 'admin']);
+            $table->time('time');
+            $table->date('date');
+            $table->enum('type', ['verlof', 'gewerkt']);
             $table->rememberToken();
             $table->timestamps();
+        });
+
+        Schema::table('timeWorked', function (Blueprint $table) {
+            $table->foreignId('user_id')
+                ->references('id')->on('users');
         });
     }
 
@@ -32,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        //
     }
 };
