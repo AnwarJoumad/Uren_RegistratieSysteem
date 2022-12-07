@@ -31,4 +31,8 @@ Route::middleware('auth')->group(function () {
 Route::resource('works', TimeController::class);
 Route::resource('verlof', LeaveController::class);
 
+Route::get('/admin/dashboard', function (){
+    return view('admin/dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
 require __DIR__.'/auth.php';
