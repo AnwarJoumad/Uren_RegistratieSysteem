@@ -51,7 +51,7 @@
                                         8
                                     </td>
                                     <td class="py-4 px-6">
-                                        0.5 uur
+                                        0.5
                                     </td>
                                     <td class="py-4 px-6">
                                         Programeren
