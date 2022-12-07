@@ -13,18 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('timeWorked', function (Blueprint $table) {
+        Schema::create('tasks', function (Blueprint $table) {
             $table->id();
-            $table->time('time');
-            $table->date('date');
-            $table->enum('type', ['verlof', 'gewerkt']);
-            $table->rememberToken();
+            $table->string('name');
             $table->timestamps();
-        });
-
-        Schema::table('timeWorked', function (Blueprint $table) {
-            $table->foreignId('user_id')
-                ->references('id')->on('users');
         });
     }
 
@@ -35,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('tasks');
     }
 };
