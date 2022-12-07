@@ -21,7 +21,6 @@ return new class extends Migration
             $table->decimal('total_time');
             $table->decimal('time_worked');
             $table->date('date');
-            $table->enum('type', ['verlof', 'gewerkt']);
             $table->text('description')->nullable();
             $table->rememberToken();
             $table->timestamps();

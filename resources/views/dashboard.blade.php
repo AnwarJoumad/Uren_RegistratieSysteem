@@ -12,6 +12,8 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     {{ __("You're logged in!") }}
+                   <br> <a href="{{route('works.create')}}">create time</a>
+                    <br> <a href="{{route('verlof.create')}}">create verlof</a>
                 </div>
             </div>
         </div>
