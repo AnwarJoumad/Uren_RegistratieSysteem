@@ -22,7 +22,7 @@ Route::get('/', function () {
 Route::get('/dashboard', [\App\Http\Controllers\PagesController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 
 
-Route::get('/calender' ,[\App\Http\Controllers\PagesController::class, 'calender'])->middleware(['auth', 'verified'])->name('calender')->name('calender');
+Route::get('/calender' ,[\App\Http\Controllers\PagesController::class, 'calender'])->middleware(['auth', 'verified'])->name('calender');
 
 
 

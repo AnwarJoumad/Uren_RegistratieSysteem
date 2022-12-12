@@ -11,7 +11,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    <form action="{{route('verlof.store')}}" method="POST">
+                    <form action="{{route('works.store')}}" method="POST">
                         @csrf
                         <div class="grid md:grid-cols-2 md:gap-6">
                             <div class="relative z-0  w-full group">
