@@ -5,10 +5,11 @@
                 <div class="p-6 text-gray-900">
                     {{ __("You're logged in!") }}
                    <br>
-                    <x-primary-button href="{{route('works.create')}}" >
-                        {{ __('Create time') }}
+                    <x-primary-button>
+                        <a href="{{route('works.create')}}">{{ __('Create time') }}</a>
                     </x-primary-button>
-                    <br> <a href="{{route('verlof.create')}}">create verlof</a>
+                    <br>
+                    <a href="{{route('verlof.create')}}">create verlof</a>
                 </div>
             </div>
         </div>
