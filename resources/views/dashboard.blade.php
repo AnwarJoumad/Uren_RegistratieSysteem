@@ -16,7 +16,6 @@
                         <p>{{$user->email}}</p>
                         <p>{{$user->role}}</p>
                     </div>
-
                 </div>
             </div>
             <div class="flex justify-between">
