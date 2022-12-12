@@ -18,12 +18,15 @@ class PagesController extends Controller
     public function dashboard()
     {
         $users = User::all();
+        $user = Auth::user();
         if (Auth::user()->role === 'admin') { //2 = Admin
             return view('admin/dashboard')
-                ->with(['users' => $users]);
+                ->with(['users' => $users])
+                ->with(['user' =>$user]);
 
         }else{
-            return view('dashboard');
+            return view('dashboard')
+                ->with(['user' => $user]);
         }
 
 

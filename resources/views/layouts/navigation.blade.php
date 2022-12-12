@@ -9,13 +9,13 @@
             </button>
         <div id="sideNav">
             <div class="rounded-full hover:bg-gray-50  p-5 ">
-                <i class="fa-solid fa-calendar"></i>
+                <a href="{{route('calender')}}"><i class="fa-solid fa-calendar"></i></a>
             </div>
             <div class="rounded-full hover:bg-gray-50 p-5">
                 <i class="fa-solid fa-users"></i>
             </div>
             <div class="rounded-full hover:bg-gray-50 p-5">
-                <i class="fa-solid fa-clock"></i>
+                <a href="{{route('works.create')}}"><i class="fa-solid fa-clock"></i></a>
             </div>
         </div>
     </aside>
