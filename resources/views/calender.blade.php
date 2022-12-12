@@ -11,70 +11,61 @@
         <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel="stylesheet" />
         <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
 
-        <script>
 
 
-
-            document.addEventListener('DOMContentLoaded', function() {
-                var calendarEl = document.getElementById('calendar');
-                var calendar = new FullCalendar.Calendar(calendarEl, {
-                    themeSysteem: 'bootstrap5',
-                    locale: 'nl',
-                    initialView: 'dayGridMonth',
-                    nowIndicator: true,
-                    options: {
-
-                    },
-                    headerToolbar: {
-                        start : 'title',
-                        center : 'today',
-                        end: 'prev next prevYear nextYear',
-                        year: 'numeric', month: 'long',
-
-
-
-                    } ,
-                    footerToolbar: {
-                        start : 'prev',
-                        end: 'next',
-
-
-
-                    } ,
-
-                    eventClick: (info) => {
-                        alert("gestart om " + info.event.start +  + "gestopt om " + info.event.end)
-                    },
-
-
-
-                    events: [
-                        @foreach($worked as $workedday)
-                        {
-                            title: "{{date('H:i', strtotime($workedday->end_time))}}",
-                            start: "{{$workedday->start_time }}",
-                            end: "{{$workedday->end_time}}",
-                            breaks: "{{$workedday->break_time}}",
-                        },
-                        @endforeach
-                    ],
-                    eventColor: '#00FF00',
-
-                });
-                calendar.render();
-            });
-
-
-
-        </script>
     </head>
+    <style>
+        .fc-event-title{
+            color: black;
+        }
+    </style>
     <body>
+    <script>
+
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                locale: 'nl',
+                initialView: 'dayGridMonth',
+                nowIndicator: true,
+                headerToolbar: {
+                    start : 'title',
+                    center : 'today',
+                    end: 'prev next prevYear nextYear',
+                    year: 'numeric', month: 'long',
+                } ,
+                footerToolbar: {
+                    start : 'prev',
+                    end: 'next',
+                } ,
+
+                eventClick: (info) => {
+                    alert(info.event.title)
+                },
+
+                events: [
+                        @foreach($worked as $workedday)
+                    {
+
+                        title: "Gewerkt van " +  "{{date('H:i', strtotime($workedday->start_time))}}"  +  " tot " + "{{date('H:i', strtotime($workedday->end_time))}}\n" + "pauze: {{$workedday->break_time}} uur",
+                        allDay: true,
+                        start: "{{$workedday->start_time}}",
+                        end: "{{$workedday->end_time}}",
+                        display: 'background',
+                        color: 'lightgreen',
+
+                    },
+                    @endforeach
+                ],
+            });
+            calendar.render();
+        });
+    </script>
     <h1>Full calandar</h1>
     <div class="container" style="width: 800px; margin: 0 auto">
         <div id='calendar'>
-
-
-
         </div>
     </div>
     </body>
