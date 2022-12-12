@@ -48,6 +48,7 @@ class TimeController extends Controller
         $timeworked->start_time = $request->start_time;
         $timeworked->end_time = $request->end_time;
         $timeworked->break_time = $request->break;
+        $timeworked->description = $request->description;
         $timeworked->total_time = $totalworked;
         $timeworked->time_worked = $totalworked - $request->break;
         $timeworked->date = date('y-m-d', strtotime($request->start_time));
