@@ -63,7 +63,6 @@
             calendar.render();
         });
     </script>
-    <h1>Full calandar</h1>
 
     <div class="container" style="width: 800px; margin: 0 auto">
         <div id='calendar'>
