@@ -25,13 +25,13 @@
                         </div>
                         <label >Aantal minuten pauze</label><br>
                         <select name="break" class="bg-gray-50 border border-gray-300 mt-2text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" >
-                            <option value="0.00">0 minuten pauze</option>
-                            <option value="0.25">15 minuten pauze</option>
-                            <option value="0.5">30 minuten pauze</option>
-                            <option value="0.75">45 minuten pauze</option>
-                            <option value="1.00">60 minuten pauze</option>
-                            <option value="1.25">75 minuten pauze</option>
-                            <option value="1.50">90 minuten pauze</option>
+                            <option value="0.00">0 minuten </option>
+                            <option value="0.25">15 minuten</option>
+                            <option value="0.5">30 minuten</option>
+                            <option value="0.75">45 minuten</option>
+                            <option value="1.00">60 minuten</option>
+                            <option value="1.25">75 minuten</option>
+                            <option value="1.50">90 minuten</option>
                         </select>
 
                         <br><label>Gewerkte taak</label> <br>
