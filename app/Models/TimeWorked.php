@@ -10,7 +10,7 @@ class TimeWorked extends Model
     use HasFactory;
     protected $table = 'timeworked';
     protected $casts = [
-        'start_time' => 'date',
+        'start_time' => 'datetime',
     ];
 
 }
