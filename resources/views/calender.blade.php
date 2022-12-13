@@ -42,7 +42,7 @@
                 } ,
 
                 eventClick: (info) => {
-                    alert(info.event.title)
+                    document.location = info.event.url;
                 },
 
                 events: [
@@ -54,6 +54,7 @@
                         start: "{{$workedday->date}}",
                         display: 'background',
                         color: 'lightgreen',
+                        url: '{{route('works.edit', $workedday)}}',
 
                     },
                     @endforeach
