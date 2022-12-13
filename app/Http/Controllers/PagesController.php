@@ -21,6 +21,7 @@ class PagesController extends Controller
     {
         $users = User::all();
         $user = Auth::user();
+        $worked = TimeWorked::where('user_id' ,'=' , Auth::user()->id)->get();
         if (Auth::user()->role === 'admin') { //2 = Admin
             return view('admin/dashboard')
                 ->with(['users' => $users])
@@ -28,7 +29,8 @@ class PagesController extends Controller
 
         }else{
             return view('dashboard')
-                ->with(['user' => $user]);
+                ->with(['user' => $user])
+                ->with(['worked' => $worked]);
         }
 
 
