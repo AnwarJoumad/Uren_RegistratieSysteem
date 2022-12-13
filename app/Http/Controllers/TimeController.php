@@ -80,8 +80,8 @@ class TimeController extends Controller
     public function edit($id)
     {
         $tasks = Task::all();
-        $timeworked = TimeWorked::findorfail($id);
-        return view('works.edit', ['timeworked' => $timeworked])
+        $timework = TimeWorked::findorfail($id);
+        return view('works.edit', ['timework' => $timework])
             ->with(['tasks' => $tasks]);
     }
 
