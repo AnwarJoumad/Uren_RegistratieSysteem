@@ -15,6 +15,8 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
         <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
+        <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel="stylesheet" />
+        <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
         @livewireStyles
         @isset($header)
             {{$header}}
@@ -23,11 +25,9 @@
 
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
             @include('layouts.navigation')
-
-        </div>
-        <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
+            @yield('content')
+            <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
         @livewireScripts
     </body>
 </html>

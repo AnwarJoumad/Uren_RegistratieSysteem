@@ -1,22 +1,18 @@
-<livewire:side-menu />
-
 <x-app-layout>
 
-    <x-slot name="header">
 
-    </x-slot>
-    <div class="py-12">
+    <div class="py-12 z-0">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <form action="{{route('works.store')}}" method="POST">
                         @csrf
                         <div class="grid md:grid-cols-2 md:gap-6">
-                            <div class="relative z-0  w-full group">
+                            <div class="relative   w-full group">
                                 <label for="start_time">Start dag</label><br>
                                 <input type="time" id="start_time" class="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="start_time" ><br>
                             </div>
-                            <div class="relative z-0  w-full group">
+                            <div class="relative  w-full group">
                                 <label for="end_time">Einde dag</label><br>
                                 <input type="time" id="end_time" class="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="end_time" ><br>
                             </div>
