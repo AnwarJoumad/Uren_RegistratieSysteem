@@ -51,8 +51,7 @@
 
                         title: "Gewerkt van " +  "{{date('H:i', strtotime($workedday->start_time))}}"  +  " tot " + "{{date('H:i', strtotime($workedday->end_time))}}\n" + "pauze: {{$workedday->break_time}} uur",
                         allDay: true,
-                        start: "{{$workedday->start_time}}",
-                        end: "{{$workedday->end_time}}",
+                        start: "{{$workedday->date}}",
                         display: 'background',
                         color: 'lightgreen',
 
@@ -64,7 +63,7 @@
         });
     </script>
 
-    <div class="container" style="width: 800px; margin: 0 auto">
+    <div class="container" style="width: 700px; margin: 0 auto">
         <div id='calendar'>
         </div>
     </div>

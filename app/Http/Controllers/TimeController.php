@@ -51,7 +51,7 @@ class TimeController extends Controller
         $timeworked->description = $request->description;
         $timeworked->total_time = $totalworked;
         $timeworked->time_worked = $totalworked - $request->break;
-        $timeworked->date = date('y-m-d', strtotime($request->start_time));
+        $timeworked->date = now();
         $timeworked->user_id = Auth::id();
         $timeworked->task_id = $request->task;
 
