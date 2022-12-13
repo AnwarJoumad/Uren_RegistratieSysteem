@@ -16,11 +16,11 @@
                         <div class="grid md:grid-cols-2 md:gap-6">
                             <div class="relative z-0  w-full group">
                                 <label for="start_time">Start dag</label><br>
-                                <input type="time" id="start_time" value="{{$timeworked->start_time}}" class="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="start_time" ><br>
+                                <input type="time" id="start_time" value="{{$timeworked->start_time->format('H:i')}}" class="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="start_time" ><br>
                             </div>
                             <div class="relative z-0  w-full group">
                                 <label for="end_time">Einde dag</label><br>
-                                <input type="time" id="end_time" value="{{$timeworked->end_time}}" class="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="end_time" ><br>
+                                <input type="time" id="end_time" value="{{$timeworked->end_time->format('H:i')}}" class="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="end_time" ><br>
                             </div>
                         </div>
                         <label >Aantal minuten pauze</label><br>
