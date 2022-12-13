@@ -49,7 +49,7 @@
                         @foreach($worked as $workedday)
                     {
 
-                        title: "Gewerkt van " +  "{{$workedday->start_time->format('H:i')}}- {{date('H:i', strtotime($workedday->end_time))}}\n pauze: {{$workedday->break_time}} uur",
+                        title: "Gewerkt van " +  "{{$workedday->start_time->format('H:i')}} - {{date('H:i', strtotime($workedday->end_time))}}\n pauze: {{$workedday->break_time}} uur",
                         allDay: true,
                         start: "{{$workedday->date}}",
                         display: 'background',
