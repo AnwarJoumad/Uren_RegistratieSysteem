@@ -16,11 +16,11 @@
                         <div class="grid md:grid-cols-2 md:gap-6">
                             <div class="relative z-0  w-full group">
                                 <label for="start_datetime">Start dag</label><br>
-                                <input type="datetime-local" id="start_datetime" class="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="start_datetime" ><br>
+                                <input type="date" id="start_datetime" class="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="start_datetime" ><br>
                             </div>
                             <div class="relative z-0  w-full group">
                                 <label for="end_datetime">Einde dag</label><br>
-                                <input type="datetime-local" id="end_datetime" class="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="end_datetime" ><br>
+                                <input type="date" id="end_datetime" class="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="end_datetime" ><br>
                             </div>
                         </div>
                         <label for="description">Omschrijving</label><br>

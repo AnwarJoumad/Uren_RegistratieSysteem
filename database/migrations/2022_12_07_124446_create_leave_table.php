@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('verlof', function (Blueprint $table) {
             $table->id();
-            $table->dateTime('start_datetime');
-            $table->dateTime('end_datetime');
+            $table->date('start_datetime');
+            $table->date('end_datetime');
             $table->text('description');
             $table->boolean('checked')->default(0);
             $table->timestamps();

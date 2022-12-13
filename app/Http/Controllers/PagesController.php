@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\leave;
 use App\Models\TimeWorked;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -12,7 +13,8 @@ class PagesController extends Controller
         public function calender()
         {
             $worked = TimeWorked::where('user_id' ,'=' , Auth::user()->id)->get();
-    return view('calender')->with(['worked' => $worked]);
+            $leave = leave::where('user_id' ,'=' , Auth::user()->id)->get();
+    return view('calender')->with(['worked' => $worked, 'leave' => $leave]);
     }
 
     public function dashboard()

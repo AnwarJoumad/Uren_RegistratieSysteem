@@ -49,11 +49,25 @@
                         @foreach($worked as $workedday)
                     {
 
-                        title: "Gewerkt van " +  "{{date('H:i', strtotime($workedday->start_time))}}"  +  " tot " + "{{date('H:i', strtotime($workedday->end_time))}}\n" + "pauze: {{$workedday->break_time}} uur",
+                        title: "Gewerkt van " +  "{{date('H:i', strtotime($workedday->start_time))}} - {{date('H:i', strtotime($workedday->end_time))}}\n pauze: {{$workedday->break_time}} uur",
                         allDay: true,
                         start: "{{$workedday->date}}",
                         display: 'background',
                         color: 'lightgreen',
+
+                    },
+                    @endforeach
+                    @foreach($leave as $item)
+                    {
+                        @if($item->checked == 1)
+                        title: "{{$item->description}} goedgekeurd",
+                        @else
+                        title: "{{$item->description}}",
+                        @endif
+                        start: "{{$item->start_datetime}}",
+                        end: "{{$item->end_datetime}}",
+                        display: 'background',
+                        color: 'lightblue',
 
                     },
                     @endforeach
