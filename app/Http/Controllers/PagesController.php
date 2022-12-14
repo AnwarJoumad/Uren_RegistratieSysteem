@@ -17,6 +17,11 @@ class PagesController extends Controller
     return view('calender')->with(['worked' => $worked, 'leave' => $leave]);
     }
 
+    public function tasks()
+    {
+        return view('tasks/index');
+    }
+
     public function dashboard()
     {
         $users = User::all();
