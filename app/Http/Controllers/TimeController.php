@@ -94,7 +94,24 @@ class TimeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $startday = strtotime($request->end_time);
+        $endday = strtotime($request->start_time);
+        $totalworked = round(abs($startday - $endday) / 3600,2);
+
+        $timeworked = TimeWorked::findorfail($id);
+        $timeworked->start_time = $request->start_time;
+        $timeworked->end_time = $request->end_time;
+        $timeworked->break_time = $request->break;
+        $timeworked->description = $request->description;
+        $timeworked->total_time = $totalworked;
+        $timeworked->time_worked = $totalworked - $request->break;
+        $timeworked->date = now();
+        $timeworked->user_id = Auth::id();
+        $timeworked->task_id = $request->task;
+
+        $timeworked->save();
+
+        return redirect('dashboard');
     }
 
     /**

@@ -24,6 +24,8 @@ Route::get('/dashboard', [\App\Http\Controllers\PagesController::class, 'dashboa
 
 Route::get('/calender' ,[\App\Http\Controllers\PagesController::class, 'calender'])->middleware(['auth', 'verified'])->name('calender');
 
+Route::get('/tasks' ,[\App\Http\Controllers\PagesController::class, 'tasks'])->middleware(['auth', 'verified']);
+
 
 
 
@@ -34,6 +36,8 @@ Route::middleware('auth')->group(function () {
 });
 Route::resource('works', TimeController::class);
 Route::resource('verlof', LeaveController::class);
+
+
 
 //Route::get('/admin/dashboard', [\App\Http\Controllers\PagesController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 
