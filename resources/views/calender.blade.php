@@ -41,9 +41,9 @@
                     @foreach($leave as $item)
                     {
                         @if($item->checked == 1)
-                        title: "{{$item->description}} goedgekeurd",
+                        title: "Goedgekeurd",
                         @else
-                        title: "{{$item->description}}",
+                        title: "Nog niet goedkeurd",
                         @endif
                         start: "{{$item->start_datetime}}",
                         end: "{{$item->end_datetime}}",
