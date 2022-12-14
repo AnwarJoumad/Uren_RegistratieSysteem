@@ -14,4 +14,5 @@ function expand(){
     document.getElementById('navText2').classList.toggle('hidden');
     document.getElementById('navText3').classList.toggle('hidden');
     document.getElementById('navText4').classList.toggle('hidden');
+    document.getElementById('navText5').classList.toggle('hidden');
 }
