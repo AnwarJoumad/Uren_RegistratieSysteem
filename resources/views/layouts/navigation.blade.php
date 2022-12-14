@@ -133,7 +133,7 @@
                     </button></a>
             </li>
             <li>
-                <a href="{{route('verlof.create')}}">
+                <a href="{{route('tasks')}}">
                     <button class="rounded-xl hover:bg-gray-50 h-16 w-16 ">
                         <i class="fa-solid fa-list-check"></i>
                         <p id="navText5" class="hidden text-sm">Taak</p>
