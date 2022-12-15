@@ -104,7 +104,7 @@ class LeaveController extends Controller
                 ->with(['verlof' => $verlof]);
         }
         else{
-            redirect('dashboard');
+           return redirect('dashboard');
         }
     }
 }

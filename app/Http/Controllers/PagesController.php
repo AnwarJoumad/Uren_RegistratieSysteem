@@ -29,7 +29,7 @@ class PagesController extends Controller
             return view('tasks/index')->with(['tasks' => $tasks]);
         }
         else{
-            redirect('dashboard');
+          return  redirect('dashboard');
         }
     }
     public function users()
@@ -66,7 +66,7 @@ class PagesController extends Controller
                 ->with(['verlof' => $verlof]);
         }
         else{
-            redirect('dashboard');
+           return redirect('dashboard');
         }
     }
 }
