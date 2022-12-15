@@ -27,7 +27,7 @@ Route::get('/calender' ,[\App\Http\Controllers\PagesController::class, 'calender
 
 Route::get('/verlofverzoeken', [\App\Http\Controllers\LeaveController::class, 'verlofverzoeken'])->middleware(['auth', 'verified'])->name('verlofverzoeken');
 
-Route::get('/tasks' ,[\App\Http\Controllers\PagesController::class, 'tasks'])->middleware(['auth', 'verified']);
+Route::get('/tasks' ,[\App\Http\Controllers\PagesController::class, 'tasks'])->middleware(['auth', 'verified'])->name('tasks');
 
 
 
