@@ -128,27 +128,37 @@
                     </button>
                 </a>
             </li>
-            <li>
-                <a href="{{route('verlof.create')}}">
+
+            @if (Auth::user()->role === 'admin')
+                <li>
+                    <a href="{{route('tasks')}}">
+                        <button class="rounded-xl hover:bg-gray-50 h-16 w-16 ">
+                            <i class="fa-solid fa-list-check"></i>
+                            <p id="navText5" class="hidden text-sm">Taak</p>
+                        </button></a>
+                </li>
+
+                <a href="{{route('verlofverzoeken')}}">
                     <button class="rounded-xl hover:bg-gray-50 h-16 w-16 ">
                         <i class="fa-solid fa-house-chimney-user"></i>
-                        <p id="navText3" class="hidden text-sm">Verlof</p>
+                        <p id="navText3" class="hidden text-sm">Verlof verzoeken</p>
                     </button></a>
             </li>
-            <li>
-                <a {{--href="{{route('verlofverzoeken')}}"--}}>
-                    <button class="rounded-xl hover:bg-gray-50 h-16 w-16 ">
-                        <i class="fa-solid fa-house-circle-check"></i>
-                        <p id="navText4" class="hidden text-sm">Verlof accepteren</p>
-                    </button></a>
-            </li>
-            <li>
-                <a href="{{route('tasks')}}">
-                    <button class="rounded-xl hover:bg-gray-50 h-16 w-16 ">
-                        <i class="fa-solid fa-list-check"></i>
-                        <p id="navText5" class="hidden text-sm">Taak</p>
-                    </button></a>
-            </li>
+
+            @else
+
+
+                <li>
+                    <a href="{{route('verlof.create')}}">
+                        <button class="rounded-xl hover:bg-gray-50 h-16 w-16 ">
+                            <i class="fa-solid fa-house-chimney-user"></i>
+                            <p id="navText4" class="hidden text-sm">Verlof</p>
+                        </button></a>
+                </li>
+
+
+            @endif
+
         </ul>
     </aside>
     <div class="pt-24">{{$slot}}</div>
