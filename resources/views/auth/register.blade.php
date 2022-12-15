@@ -4,13 +4,13 @@
     <x-auth-card class="!bg-transparent">
         <x-slot name="logo">
             <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                <h1 class="text-3xl text-gray-900 bg-gray-100  rounded p-1 dark:text-white">Urenregistratie</h1>
             </a>
         </x-slot>
 
         <form method="POST" action="{{ route('register') }}">
             @csrf
-            <h1 class="text-5xl text-center">Registreer</h1>
+            <h3 class="text-xl text-center">Registreer</h3>
 
             <!-- Name -->
             <div>
