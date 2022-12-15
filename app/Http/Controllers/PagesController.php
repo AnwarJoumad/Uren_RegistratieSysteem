@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\leave;
+use App\Models\Task;
 use App\Models\TimeWorked;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -23,7 +24,8 @@ class PagesController extends Controller
 
     public function tasks()
     {
-        return view('tasks/index');
+        $tasks = Task::all();
+        return view('tasks/index')->with(['tasks' => $tasks]);
     }
 
     public function dashboard()
