@@ -1,4 +1,4 @@
-<livewire:side-menu />
+
 
 <x-app-layout>
     <x-slot name="header">
