@@ -18,6 +18,10 @@ class AddTask extends Component
 
     public function addTask()
     {
+
+        $this->validate([
+            'newTask' => 'required|min:3',
+        ]);
         $task = new Task();
         $task->name = $this->newTask;
         $task->save();
