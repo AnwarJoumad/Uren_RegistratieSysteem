@@ -16,7 +16,6 @@
                                 <p>06-12-2003</p>
                                 <p>Developer</p>
                             </div>
-                            <x-primary-button type="button" data-modal-toggle="defaultModal">Taak aanmaken</x-primary-button>
                         </div>
                     </div>
                     <div class="flex justify-between">
