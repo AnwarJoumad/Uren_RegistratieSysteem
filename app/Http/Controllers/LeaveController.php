@@ -78,7 +78,7 @@ class LeaveController extends Controller
     public function update(Request $request, $id)
     {
         $leave = leave::findorfail($id);
-        $leave->checked = $request->active + 1;
+        $leave->checked = $request->active = 1;
         $leave->save();
 
         $leave = leave::all();
