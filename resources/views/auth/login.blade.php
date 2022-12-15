@@ -4,15 +4,16 @@
         <x-auth-card class="!bg-transparent">
             <x-slot name="logo">
                 <a href="/">
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                    <h1 class="text-3xl text-gray-900 bg-gray-100  rounded p-1 dark:text-white">Urenregistratie</h1>
                 </a>
             </x-slot>
+
             <!-- Session Status -->
             <x-auth-session-status class="mb-4" :status="session('status')" />
 
             <form method="POST" action="{{ route('login') }}">
                 @csrf
-                <h1 class="text-5xl text-center">Login</h1>
+                <h3 class="text-xl text-center">Login</h3>
                 <!-- Email Address -->
                 <div>
                     <x-input-label for="email" :value="__('Email')" />
