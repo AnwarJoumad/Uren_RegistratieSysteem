@@ -9,4 +9,5 @@ class leave extends Model
 {
     use HasFactory;
     protected $table = 'verlof';
+
 }
