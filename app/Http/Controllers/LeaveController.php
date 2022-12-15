@@ -82,7 +82,7 @@ class LeaveController extends Controller
         $leave->save();
 
         $leave = leave::all();
-        return redirect('dashboard');
+        return redirect('verlofverzoeken');
 
     }
 
