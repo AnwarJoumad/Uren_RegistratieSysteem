@@ -82,7 +82,7 @@ class LeaveController extends Controller
         $leave->save();
 
         $leave = leave::all();
-        return redirect('dashboard');
+        return redirect('verlofverzoeken');
 
     }
 
@@ -98,9 +98,13 @@ class LeaveController extends Controller
     }
 
     public function verlofverzoeken(){
-        $verlof = leave::all();
-        return view('verlofverzoeken')
-            ->with(['verlof' => $verlof]);
-
+        if (Auth::user()->role === 'admin') { //2
+            $verlof = leave::all();
+            return view('verlofverzoeken')
+                ->with(['verlof' => $verlof]);
+        }
+        else{
+           return redirect('dashboard');
+        }
     }
 }

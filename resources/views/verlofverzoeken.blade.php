@@ -57,7 +57,12 @@
                                                     @csrf
                                                     @method('put')
                                                     <a href="#" >
-                                                        <button @if($verlof->checked == 1) disabled @endif type="submit" style="background-color: #ee0d73; cursor: pointer;" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Accepteren</button>
+                                                        @if($verlof->checked == 1)
+
+                                                        @else
+                                                            <button type="submit" style="background-color: #ee0d73; cursor: pointer;" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Accepteren</button>
+
+                                                        @endif
                                                     </a>
                                                 </form>
                                             </td>
