@@ -32,6 +32,12 @@ class PagesController extends Controller
             redirect('dashboard');
         }
     }
+    public function users()
+    {
+        $users = User::all();
+        return view('users/index')
+            ->with(['users'=> $users]);
+    }
 
     public function dashboard()
     {
@@ -41,7 +47,8 @@ class PagesController extends Controller
         if (Auth::user()->role === 'admin') { //2 = Admin
             return view('admin/dashboard')
                 ->with(['users' => $users])
-                ->with(['user' =>$user]);
+                ->with(['user' =>$user])
+                ->with(['worked' => $worked]);
 
         }else{
             return view('dashboard')

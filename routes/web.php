@@ -21,6 +21,8 @@ Route::get('/', function () {
 
 Route::get('/dashboard', [\App\Http\Controllers\PagesController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/users', [\App\Http\Controllers\PagesController::class, 'users'])->middleware(['auth', 'verified'])->name('users');
+
 
 Route::get('/calender' ,[\App\Http\Controllers\PagesController::class, 'calender'])->middleware(['auth', 'verified'])->name('calender');
 

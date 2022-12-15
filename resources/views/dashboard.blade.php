@@ -65,7 +65,6 @@
                 </div>
         </div>
     </div>
-
 </x-app-layout>
 
 <script type="text/javascript">

@@ -7,7 +7,6 @@
         </div>
         <nav x-data="{ open: false }" id="navbar" class="sticky top-0  w-full  bg-[#ee0d73] px-4 sm:justify-between">
                 <!-- Primary Navigation Menu -->
-
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div id="main">
                     </div>
@@ -104,7 +103,6 @@
             </nav>
         </header>
     <aside id="nav" class="h-full w-20 flex flex-col z-10 items-center justify-start fixed bg-gray-200 text-black  fa-xl">
-
         <ul id="sideNav" class="text-center px-2 pt-16">
             <li class=" ">
                 <a href="{{route('calender')}}">
@@ -114,17 +112,19 @@
                     </button>
                 </a>
             </li>
-            <li>
+            {{--<li>
+                <a href="{{route('users')}}">
                 <button class="rounded-xl hover:bg-gray-50 h-16 w-16">
                     <i class="fa-solid fa-users"></i>
                     <p id="navText2" class="hidden text-sm">Gebruikers</p>
                 </button>
-            </li>
+                </a>
+            </li>--}}
             <li>
                 <a href="{{route('works.create')}}">
                     <button class="rounded-xl hover:bg-gray-50 h-16 w-16">
                         <i class="fa-solid fa-clock"></i>
-                        <p id="navText3" class="hidden text-sm">Klok</p>
+                        <p id="navText2" class="hidden text-sm">Klok</p>
                     </button>
                 </a>
             </li>
@@ -132,7 +132,14 @@
                 <a href="{{route('verlof.create')}}">
                     <button class="rounded-xl hover:bg-gray-50 h-16 w-16 ">
                         <i class="fa-solid fa-house-chimney-user"></i>
-                        <p id="navText4" class="hidden text-sm">Verlof</p>
+                        <p id="navText3" class="hidden text-sm">Verlof</p>
+                    </button></a>
+            </li>
+            <li>
+                <a {{--href="{{route('verlofverzoeken')}}"--}}>
+                    <button class="rounded-xl hover:bg-gray-50 h-16 w-16 ">
+                        <i class="fa-solid fa-house-circle-check"></i>
+                        <p id="navText4" class="hidden text-sm">Verlof accepteren</p>
                     </button></a>
             </li>
             <li>
@@ -146,6 +153,17 @@
     </aside>
     <div class="pt-24">{{$slot}}</div>
 </div>
+<script>
+    document.getElementById("expand").addEventListener("click",expand);
+    function expand(){
+        document.getElementById('nav').classList.toggle('!w-40');
+        document.getElementById('navText1').classList.toggle('hidden');
+        document.getElementById('navText2').classList.toggle('hidden');
+        document.getElementById('navText3').classList.toggle('hidden');
+        document.getElementById('navText4').classList.toggle('hidden');
+        document.getElementById('navText5').classList.toggle('hidden');
+    }
+</script>
 
 
 
