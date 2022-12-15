@@ -1,47 +1,11 @@
-<!-- component -->
-<div class="h-screen w-full bg-white relative flex overflow-hidden">
-
-    <!-- Sidebar -->
-    <aside id="nav" class="h-full w-20 flex flex-col  items-center justify-start relative bg-gray-200 text-black  fa-xl">
-            <button id="expand" class="group rounded-xl hover:bg-gray-50 h-16 w-16 ">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        <ul id="sideNav" class="text-center px-2 ">
-            <li class=" ">
-                <a href="{{route('calender')}}">
-                    <button class="rounded-xl hover:bg-gray-50 h-16 w-16 ">
-                        <i class="fa-solid fa-calendar"></i>
-                        <p id="navText1" class="hidden text-sm ">Calender</p>
-                    </button>
-                </a>
-            </li>
-            <li>
-                <button class="rounded-xl hover:bg-gray-50 h-16 w-16">
-                    <i class="fa-solid fa-users"></i>
-                    <p id="navText2" class="hidden text-sm">Gebruikers</p>
-                </button>
-            </li>
-            <li>
-                <a href="{{route('works.create')}}">
-                    <button class="rounded-xl hover:bg-gray-50 h-16 w-16">
-                        <i class="fa-solid fa-clock"></i>
-                        <p id="navText3" class="hidden text-sm">Klok</p>
-                    </button>
-                </a>
-            </li>
-            <li>
-                <a href="{{route('verlof.create')}}">
-                <button class="rounded-xl hover:bg-gray-50 h-16 w-16 ">
-                    <i class="fa-solid fa-house-chimney-user"></i>
-                    <p id="navText4" class="hidden text-sm">Verlof</p>
-                </button></a>
-            </li>
-        </ul>
-    </aside>
-    <div class="w-full h-full flex flex-col ">
-        <!-- Header -->
-        <header class="h-16 w-full flex items-center relative justify-end px-5 space-x-10 bg-[#ee0d73]">
-            <nav x-data="{ open: false }" id="navbar" class="sticky top-0  w-full  bg-[#ee0d73] px-4 sm:justify-between">
+<div >
+    <header class="h-18 w-full flex  flex-row items-center fixed justify-end z-20 pr-5 pb-14space-x-10 bg-[#ee0d73]">
+        <div>
+        <button id="expand" class="hover:bg-gray-50 bg-gray-200  h-16 w-20 px-2 ">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        </div>
+        <nav x-data="{ open: false }" id="navbar" class="sticky top-0  w-full  bg-[#ee0d73] px-4 sm:justify-between">
                 <!-- Primary Navigation Menu -->
 
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -139,21 +103,49 @@
                 </div>
             </nav>
         </header>
-        {{ $slot }}
-    </div>
+    <aside id="nav" class="h-full w-20 flex flex-col z-10 items-center justify-start fixed bg-gray-200 text-black  fa-xl">
+
+        <ul id="sideNav" class="text-center px-2 pt-16">
+            <li class=" ">
+                <a href="{{route('calender')}}">
+                    <button class="rounded-xl hover:bg-gray-50 h-16 w-16 ">
+                        <i class="fa-solid fa-calendar"></i>
+                        <p id="navText1" class="hidden text-sm ">Calender</p>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <button class="rounded-xl hover:bg-gray-50 h-16 w-16">
+                    <i class="fa-solid fa-users"></i>
+                    <p id="navText2" class="hidden text-sm">Gebruikers</p>
+                </button>
+            </li>
+            <li>
+                <a href="{{route('works.create')}}">
+                    <button class="rounded-xl hover:bg-gray-50 h-16 w-16">
+                        <i class="fa-solid fa-clock"></i>
+                        <p id="navText3" class="hidden text-sm">Klok</p>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="{{route('verlof.create')}}">
+                    <button class="rounded-xl hover:bg-gray-50 h-16 w-16 ">
+                        <i class="fa-solid fa-house-chimney-user"></i>
+                        <p id="navText4" class="hidden text-sm">Verlof</p>
+                    </button></a>
+            </li>
+            <li>
+                <a {{--href="{{route('tasks')}}"--}}>
+                    <button class="rounded-xl hover:bg-gray-50 h-16 w-16 ">
+                        <i class="fa-solid fa-list-check"></i>
+                        <p id="navText5" class="hidden text-sm">Taak</p>
+                    </button></a>
+            </li>
+        </ul>
+    </aside>
+    <div class="pt-24">{{$slot}}</div>
 </div>
-<script>
-    document.getElementById("expand").addEventListener("click",expand);
-    function expand(){
-        document.getElementById('nav').classList.toggle('!w-40');
-        document.getElementById('navText1').classList.toggle('hidden');
-        document.getElementById('navText2').classList.toggle('hidden');
-        document.getElementById('navText3').classList.toggle('hidden');
-        document.getElementById('navText4').classList.toggle('hidden');
 
-
-    }
-
-</script>
 
 

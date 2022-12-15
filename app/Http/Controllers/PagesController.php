@@ -21,6 +21,11 @@ class PagesController extends Controller
 
     }
 
+    public function tasks()
+    {
+        return view('tasks/index');
+    }
+
     public function dashboard()
     {
         $users = User::all();
