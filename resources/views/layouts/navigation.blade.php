@@ -1,6 +1,11 @@
 <div >
-    <header class="h-16 w-full flex  flex-row items-center fixed justify-end px-5 pb-14space-x-10 bg-[#ee0d73]">
-            <nav x-data="{ open: false }" id="navbar" class="sticky top-0  w-full  bg-[#ee0d73] px-4 sm:justify-between">
+    <header class="h-18 w-full flex  flex-row items-center fixed justify-end z-20 pr-5 pb-14space-x-10 bg-[#ee0d73]">
+        <div>
+        <button id="expand" class="hover:bg-gray-50 bg-gray-200  h-16 w-20 px-2 ">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        </div>
+        <nav x-data="{ open: false }" id="navbar" class="sticky top-0  w-full  bg-[#ee0d73] px-4 sm:justify-between">
                 <!-- Primary Navigation Menu -->
 
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -99,10 +104,8 @@
             </nav>
         </header>
     <aside id="nav" class="h-full w-20 flex flex-col z-10 items-center justify-start fixed bg-gray-200 text-black  fa-xl">
-        <button id="expand" class="group rounded-xl hover:bg-gray-50 h-16 w-16 ">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-        <ul id="sideNav" class="text-center px-2 ">
+
+        <ul id="sideNav" class="text-center px-2 pt-16">
             <li class=" ">
                 <a href="{{route('calender')}}">
                     <button class="rounded-xl hover:bg-gray-50 h-16 w-16 ">
@@ -133,7 +136,7 @@
                     </button></a>
             </li>
             <li>
-                <a href="{{route('verlof.create')}}">
+                <a {{--href="{{route('tasks')}}"--}}>
                     <button class="rounded-xl hover:bg-gray-50 h-16 w-16 ">
                         <i class="fa-solid fa-list-check"></i>
                         <p id="navText5" class="hidden text-sm">Taak</p>
