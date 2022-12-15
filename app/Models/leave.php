@@ -9,12 +9,9 @@ class leave extends Model
 {
     use HasFactory;
     protected $table = 'verlof';
-
-
+    
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id');
     }
-
-
 }
