@@ -24,8 +24,13 @@ class PagesController extends Controller
 
     public function tasks()
     {
-        $tasks = Task::all();
-        return view('tasks/index')->with(['tasks' => $tasks]);
+        if (Auth::user()->role === 'admin') { //2
+            $tasks = Task::all();
+            return view('tasks/index')->with(['tasks' => $tasks]);
+        }
+        else{
+            redirect('dashboard');
+        }
     }
 
     public function dashboard()
@@ -48,9 +53,13 @@ class PagesController extends Controller
     }
 
     public function verlofverzoeken(){
-        $verlof = leave::all();
-        return view('verlofverzoeken')
-            ->with(['verlof' => $verlof]);
-
+        if (Auth::user()->role === 'admin') { //2
+            $verlof = leave::all();
+            return view('verlofverzoeken')
+                ->with(['verlof' => $verlof]);
+        }
+        else{
+            redirect('dashboard');
+        }
     }
 }
