@@ -77,7 +77,13 @@ class LeaveController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $leave = leave::findorfail($id);
+        $leave->checked = $request->active + 1;
+        $leave->save();
+
+        $leave = leave::all();
+        return redirect('dashboard');
+
     }
 
     /**
@@ -89,5 +95,12 @@ class LeaveController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function verlofverzoeken(){
+        $verlof = leave::all();
+        return view('verlofverzoeken')
+            ->with(['verlof' => $verlof]);
+
     }
 }

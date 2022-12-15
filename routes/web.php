@@ -24,7 +24,7 @@ Route::get('/dashboard', [\App\Http\Controllers\PagesController::class, 'dashboa
 
 Route::get('/calender' ,[\App\Http\Controllers\PagesController::class, 'calender'])->middleware(['auth', 'verified'])->name('calender');
 
-
+Route::get('/verlofverzoeken', [\App\Http\Controllers\LeaveController::class, 'verlofverzoeken'])->middleware(['auth', 'verified'])->name('verlofverzoeken');
 
 
 Route::middleware('auth')->group(function () {

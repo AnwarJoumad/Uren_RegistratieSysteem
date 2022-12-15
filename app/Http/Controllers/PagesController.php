@@ -13,8 +13,12 @@ class PagesController extends Controller
         public function calender()
         {
             $worked = TimeWorked::where('user_id' ,'=' , Auth::user()->id)->get();
+
             $leave = leave::where('user_id' ,'=' , Auth::user()->id)->get();
     return view('calender')->with(['worked' => $worked, 'leave' => $leave]);
+
+            return view('calender')->with(['worked' => $worked]);
+
     }
 
     public function dashboard()
@@ -33,6 +37,13 @@ class PagesController extends Controller
                 ->with(['worked' => $worked]);
         }
 
+
+    }
+
+    public function verlofverzoeken(){
+        $verlof = leave::all();
+        return view('verlofverzoeken')
+            ->with(['verlof' => $verlof]);
 
     }
 }
