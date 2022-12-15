@@ -50,7 +50,7 @@
                                             {{$work->break_time}} uur
                                         </td>
                                         <td class="py-4 px-6">
-                                            Programeren
+                                            {{$work->taskName->name}}
                                         </td>
                                     </tr>
                                 @endforeach

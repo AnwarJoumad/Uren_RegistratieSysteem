@@ -15,5 +15,9 @@ class TimeWorked extends Model
 
     ];
 
+    public function taskName(){
+        return $this->belongsTo(Task::class, 'task_id');
+    }
+
 
 }
