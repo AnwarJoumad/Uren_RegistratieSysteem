@@ -33,6 +33,8 @@ Route::get('/tasks' ,[\App\Http\Controllers\PagesController::class, 'tasks'])->m
 
 Route::get('/colleague' ,[\App\Http\Controllers\PagesController::class, 'colleague'])->middleware(['auth', 'verified'])->name('colleague');
 
+Route::get('/declaratie' ,[\App\Http\Controllers\PagesController::class, 'declaratie'])->middleware(['auth', 'verified'])->name('declaratie');
+
 
 
 Route::middleware('auth')->group(function () {
@@ -42,6 +44,8 @@ Route::middleware('auth')->group(function () {
 });
 Route::resource('works', TimeController::class);
 Route::resource('verlof', LeaveController::class);
+Route::resource('declaraties', \App\Http\Controllers\DeclaratieController::class);
+
 
 
 

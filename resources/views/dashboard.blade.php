@@ -61,6 +61,49 @@
                             </table>
                         </div>
 
+
+                        <h3 class="m-5"><bold>declaraties</bold></h3>
+
+                        <div class="overflow-x-auto relative">
+                            <table  id="myTable" class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                <tr>
+                                    <th scope="col" class="py-3 px-6">
+                                        Datum
+                                    </th>
+                                    <th scope="col" class="py-3 px-6">
+                                        beschrijving
+                                    </th>
+                                    <th scope="col" class="py-3 px-6">
+                                        hoeveelheid
+                                    </th>
+                                    <th scope="col" class="py-3 px-6">
+                                        goedgekeurd
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach ($gegevens as $item)
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            {{$item->date}}
+                                        </th>
+                                        <td class="py-4 px-6">
+                                            {{$item->description}}
+                                        </td>
+                                        <td class="py-4 px-6">
+                                            € {{$item->amount}}
+                                        </td>
+                                        <td class="py-4 px-6">
+                                            @if($item->approved == 0) nee @else ja @endif
+                                        </td>
+                                    </tr>
+                                @endforeach
+
+                                </tbody>
+                            </table>
+                        </div>
+
                     </div>
                 </div>
         </div>

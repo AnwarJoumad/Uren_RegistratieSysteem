@@ -147,6 +147,15 @@
                     </button>
                 </a>
             </li>
+            <li>
+
+                <a href="{{route('declaratie')}}">
+                    <button class="rounded-xl hover:bg-gray-50 h-16 w-16 ">
+                        <i class="fa-sharp fa-solid fa-euro-sign"></i>
+                            <p id="navText3" class="hidden text-sm">decelaite</p>
+                    </button>
+                </a>
+            </li>
 
             @if (Auth::user()->role === 'admin')
                 <li>
@@ -175,7 +184,7 @@
                             <p id="navText3" class="hidden text-sm">Verlof</p>
                         </button></a>
                 </li>
-
+                </i>
 
             @endif
 
