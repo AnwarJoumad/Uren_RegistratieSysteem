@@ -9,4 +9,9 @@ class Declaratie extends Model
 {
     use HasFactory;
     protected $table = 'declaratie';
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }
