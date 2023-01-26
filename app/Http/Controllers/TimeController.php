@@ -27,7 +27,7 @@ class TimeController extends Controller
     public function create()
     {
         $tasks = Task::all();
-        return view('works.create')->with(['tasks' => $tasks]);
+        return view('works.create')->with(['tasks' => $tasks])->with(['']);
     }
 
     /**

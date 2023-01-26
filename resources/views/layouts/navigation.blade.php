@@ -124,7 +124,26 @@
                 <a href="{{route('works.create')}}">
                     <button class="rounded-xl hover:bg-gray-50 h-16 w-16">
                         <i class="fa-solid fa-clock"></i>
-                        <p id="navText2" class="hidden text-sm">Klok</p>
+                        <p id="navText2" class="hidden text-sm">uren registreren</p>
+                    </button>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{route('colleague')}}">
+                    <button class="rounded-xl hover:bg-gray-50 h-16 w-16">
+                        <i class="fa-solid fa-user-group"></i>
+                        <p id="navText5" class="hidden text-sm">Contacten</p>
+                    </button>
+                </a>
+            </li>
+
+
+            <li>
+                <a href="{{route('colleague')}}">
+                    <button class="rounded-xl hover:bg-gray-50 h-16 w-16">
+                        <i class="fa-sharp fa-solid fa-euro-sign"></i>
+                        <p id="navText7" class="hidden text-sm">Declaratie</p>
                     </button>
                 </a>
             </li>
@@ -134,7 +153,7 @@
                     <a href="{{route('tasks')}}">
                         <button class="rounded-xl hover:bg-gray-50 h-16 w-16 ">
                             <i class="fa-solid fa-list-check"></i>
-                            <p id="navText5" class="hidden text-sm">Taak</p>
+                            <p id="navText4" class="hidden text-sm">Taak</p>
                         </button></a>
                 </li>
 

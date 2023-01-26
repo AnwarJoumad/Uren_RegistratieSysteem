@@ -69,4 +69,9 @@ class PagesController extends Controller
            return redirect('dashboard');
         }
     }
+
+    public function colleague()
+    {
+        return view('colleague');
+    }
 }

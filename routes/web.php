@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TimeController;
 use App\Http\Controllers\LeaveController;
+use App\Http\Controllers\ColleagueController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,12 +27,11 @@ Route::get('/users', [\App\Http\Controllers\PagesController::class, 'users'])->m
 
 Route::get('/calender' ,[\App\Http\Controllers\PagesController::class, 'calender'])->middleware(['auth', 'verified'])->name('calender');
 
-
 Route::get('/verlofverzoeken', [\App\Http\Controllers\LeaveController::class, 'verlofverzoeken'])->middleware(['auth', 'verified'])->name('verlofverzoeken');
 
 Route::get('/tasks' ,[\App\Http\Controllers\PagesController::class, 'tasks'])->middleware(['auth', 'verified'])->name('tasks');
 
-
+Route::get('/colleague' ,[\App\Http\Controllers\PagesController::class, 'colleague'])->middleware(['auth', 'verified'])->name('colleague');
 
 
 
