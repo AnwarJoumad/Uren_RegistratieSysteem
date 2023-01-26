@@ -4,7 +4,7 @@
         <x-auth-card class="!bg-transparent">
             <x-slot name="logo">
                 <a href="/">
-                    <h1 class="text-3xl text-gray-900 bg-gray-100  rounded p-1 dark:text-white">Urenregistratie</h1>
+                    <img src="{{ Vite::asset('resources/media/uren_logo_register.svg') }}" alt="" width="90px" length="auto">
                 </a>
             </x-slot>
 

@@ -15,7 +15,7 @@
                             <!-- Logo -->
                             <div class="shrink-0 flex items-center">
                                 <a href="{{ route('dashboard') }}">
-                                    <x-application-logo class="block h-9 w-auto fill-current text-white" />
+                                    <img src="{{ Vite::asset('resources/media/logo_uren.svg') }}" alt="" width="90px" length="auto">
                                 </a>
                             </div>
                         </div>

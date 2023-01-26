@@ -1,8 +1,10 @@
 <x-guest-layout>
-    <x-auth-card>
+    <img src="{{ Vite::asset('resources/media/clock.png') }}" class=" absolute opacity-25 h-screen right-0  " alt="...">
+    <div class="absolute w-screen h-screen top-0 left-0 ">
+    <x-auth-card class="!bg-transparent">
         <x-slot name="logo">
             <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                <img src="{{ Vite::asset('resources/media/uren_logo_register.svg') }}" alt="" width="90px" length="auto">
             </a>
         </x-slot>
 
