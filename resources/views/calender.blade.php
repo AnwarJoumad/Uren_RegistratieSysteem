@@ -19,7 +19,22 @@
                 } ,
 
                 eventClick: (info) => {
-                    document.location = info.event.url;
+                    const maxdate =  new Date(Date.now() + (3600 * 1000 * 24));
+                    maxdate.setHours(0,0,0,0);
+                    const mindate = new Date(Date.now() -  (3600 * 1000 * 24));
+                    mindate.setHours(0,0,0,0);
+                    var eventdate = new Date(info.event.start);
+                    eventdate.setHours(0,0,0,0);
+
+                    if (eventdate <= maxdate && eventdate >= mindate) {
+                        document.location = info.event.url;
+                    }
+                    else
+                    {
+                        alert('Je kunt alleen diensten op de dag zelf of de dag erna aanpassen');
+                    }
+
+
                 },
 
                 events: [
