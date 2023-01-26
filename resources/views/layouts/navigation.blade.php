@@ -149,10 +149,11 @@
 
 
                 <li>
+
                     <a href="{{route('verlof.create')}}">
                         <button class="rounded-xl hover:bg-gray-50 h-16 w-16 ">
                             <i class="fa-solid fa-house-chimney-user"></i>
-                            <p id="navText4" class="hidden text-sm">Verlof</p>
+                            <p id="navText3" class="hidden text-sm">Verlof</p>
                         </button></a>
                 </li>
 

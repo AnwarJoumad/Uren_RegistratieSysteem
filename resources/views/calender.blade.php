@@ -55,7 +55,7 @@
         });
     </script>
     <div class="container" style="width: 700px; margin: 0 auto">
-        <div id='calendar'>
+        <div id='calendar' style="margin-bottom: 20px">
         </div>
     </div>
 </x-app-layout>

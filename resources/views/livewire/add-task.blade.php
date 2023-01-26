@@ -7,7 +7,7 @@
     @endif
 
     @if($showInput == true)
-    <input  placeholder="Naam taak" type="text" wire:model="newTask">
+    <input  placeholder="Naam taak" type="text" style="border: 1px solid black; border-radius: 0.375rem" wire:model="newTask">
     <button wire:click="addTask" class="inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Taak Toevoegen</button>
     @endif
         @if($showInput == false)
@@ -42,15 +42,15 @@
                             </th>
                             <td class="py-4 px-6">
                                 @if($changeInput == false)
-                                    <button wire:click="changeInput({{ $task->id }})" class="inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Taak bewerken</button>
+                                    <button wire:click="changeInput({{ $task->id }})" style="border: 2px solid blue" class="inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Taak bewerken</button>
                                 @else
-                                    <button wire:click="changeTask({{ $task->id }})"  class="inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Taak aanpassen</button>
+                                    <button wire:click="changeTask({{ $task->id }})"  style="border: 2px solid #ee0d73" class="inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Taak aanpassen</button>
                                 @endif
 
 
                             </td>
                             <td class="py-4 px-6">
-                                <button wire:click="deleteTask({{ $task->id }})"  class="inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Taak verwijderen</button>
+                                <button wire:click="deleteTask({{ $task->id }})" style="border: 2px solid #ee0d73; color: #FFFFFF; background-color: #ee0d73" class="inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Taak verwijderen</button>
                             </td>
                         </tr>
                     @endforeach

@@ -48,7 +48,7 @@
                                         {{$work->total_time}}
                                     </td>
                                     <td class="py-4 px-6">
-                                        {{$work->break_time}} uur
+                                        {{$work->break_time * 60}} min
                                     </td>
                                     <td class="py-4 px-6">
                                         {{$work->taskName->name}}
