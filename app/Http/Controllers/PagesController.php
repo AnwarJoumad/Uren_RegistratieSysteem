@@ -29,6 +29,16 @@ class PagesController extends Controller
         return view('declaratie');
     }
 
+    public function declararing()
+    {
+        $gegevens = Declaratie::all();
+        if (Auth::user()->role == 'admin') {
+            return view('declararing')->with(['gegevens' => $gegevens]);
+        } else {
+            return redirect()->route('dashboard');
+        }
+    }
+
 
     public function tasks()
     {

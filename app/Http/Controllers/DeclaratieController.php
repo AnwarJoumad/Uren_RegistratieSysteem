@@ -64,7 +64,10 @@ class DeclaratieController extends Controller
      */
     public function edit($id)
     {
-        //
+        $item = Declaratie::findorfail($id);
+        $item->approved = "1";
+        $item->save();
+        return back();
     }
 
     /**

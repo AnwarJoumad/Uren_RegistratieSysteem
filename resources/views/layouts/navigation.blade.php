@@ -137,19 +137,13 @@
                     </button>
                 </a>
             </li>
-
-
-            <li>
-                <a href="{{route('colleague')}}">
-                    <button class="rounded-xl hover:bg-gray-50 h-16 w-16">
-                        <i class="fa-sharp fa-solid fa-euro-sign"></i>
-                        <p id="navText7" class="hidden text-sm">Declaratie</p>
-                    </button>
-                </a>
-            </li>
             <li>
 
+                @if(Auth::user()->role == 'admin')
+                                   <a href="{{route('declararing')}}">
+                    @else
                 <a href="{{route('declaratie')}}">
+                    @endif
                     <button class="rounded-xl hover:bg-gray-50 h-16 w-16 ">
                         <i class="fa-sharp fa-solid fa-euro-sign"></i>
                             <p id="navText3" class="hidden text-sm">decelaite</p>

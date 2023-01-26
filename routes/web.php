@@ -35,6 +35,9 @@ Route::get('/colleague' ,[\App\Http\Controllers\PagesController::class, 'colleag
 
 Route::get('/declaratie' ,[\App\Http\Controllers\PagesController::class, 'declaratie'])->middleware(['auth', 'verified'])->name('declaratie');
 
+Route::get('/declararing' ,[\App\Http\Controllers\PagesController::class, 'declararing'])->middleware(['auth', 'verified'])->name('declararing');
+
+
 
 
 Route::middleware('auth')->group(function () {
