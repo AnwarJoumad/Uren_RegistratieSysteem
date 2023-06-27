@@ -8,7 +8,7 @@
     <div style="display: flex; justify-content: space-around; margin-left: 50px">
         <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" style="margin-left: 80px">
             <a href="#">
-                <img class="rounded-t-lg" src="https://source.unsplash.com/random/350x200?sig=1" alt="" />
+                <img class="rounded-t-lg" src="{{ Vite::asset('resources/media/placeholder.jpg') }}" alt="" style="height: 280px; width: 350px;" />
             </a>
             <div class="p-5" style="width: 350px">
                 <a href="#">
@@ -24,7 +24,7 @@
 
         <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
-                <img class="rounded-t-lg" src="https://source.unsplash.com/random/350x200?sig=1" alt="" />
+                <img class="rounded-t-lg" src="{{ Vite::asset('resources/media/placeholder.jpg') }}" alt="" style="height: 280px; width: 350px;" />
             </a>
             <div class="p-5" style="width: 350px">
                 <a href="#">
@@ -40,7 +40,7 @@
 
         <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" style="margin-right: 50px;">
             <a href="#">
-                <img class="rounded-t-lg" src="https://source.unsplash.com/random/350x200?sig=1" alt="" />
+                <img class="rounded-t-lg" src="{{ Vite::asset('resources/media/placeholder.jpg') }}" alt="" style="height: 280px; width: 350px;" />
             </a>
             <div class="p-5" style="width: 350px;">
                 <a href="#">
@@ -59,7 +59,7 @@
     <div style="display: flex; justify-content: space-around; margin-left: 50px; margin-top: 50px; margin-bottom: 50px">
         <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" style="margin-left: 80px">
             <a href="#">
-                <img class="rounded-t-lg" src="https://source.unsplash.com/random/350x200?sig=1" alt="" />
+                <img class="rounded-t-lg" src="{{ Vite::asset('resources/media/placeholder.jpg') }}" alt="" style="height: 280px; width: 350px;" />
             </a>
             <div class="p-5" style="width: 350px">
                 <a href="#">
@@ -75,7 +75,7 @@
 
         <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
-                <img class="rounded-t-lg" src="https://source.unsplash.com/random/350x200?sig=1" alt="" />
+                <img class="rounded-t-lg" src="{{ Vite::asset('resources/media/placeholder.jpg') }}" alt="" style="height: 280px; width: 350px;" />
             </a>
             <div class="p-5" style="width: 350px">
                 <a href="#">
@@ -91,7 +91,7 @@
 
         <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" style="margin-right: 50px;">
             <a href="#">
-                <img class="rounded-t-lg" src="https://source.unsplash.com/random/350x200?sig=1" alt="" />
+                <img class="rounded-t-lg" src="{{ Vite::asset('resources/media/placeholder.jpg') }}" alt="" style="height: 280px; width: 350px;" />
             </a>
             <div class="p-5" style="width: 350px;">
                 <a href="#">
